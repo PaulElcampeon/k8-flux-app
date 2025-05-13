@@ -9,4 +9,6 @@ spec:
   url: ssh://github.com/PaulElcampeon/k8-flux-app
   ref:
     branch: main
+  secretRef:
+    name: k8-flux-app-source  # This should match the name you gave in the flux create secret command
   timeout: 20s
