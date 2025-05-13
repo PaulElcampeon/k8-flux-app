@@ -1,0 +1,19 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: k8-flux-app
+  namespace: default
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: ./k8s/helm/k8-flux-app
+      sourceRef:
+        kind: GitRepository
+        name: k8-flux-app
+        namespace: flux-system
+      interval: 1m
+  values:
+    image:
+      repository: paulthedev007/k8-flux-app
+      tag: latest

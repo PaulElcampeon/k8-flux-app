@@ -1,0 +1,12 @@
+
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: k8-flux-app
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: ssh://github.com/PaulElcampeon/k8-flux-app
+  ref:
+    branch: main
+  timeout: 20s
