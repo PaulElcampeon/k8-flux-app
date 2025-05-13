@@ -8,6 +8,6 @@ public class HelloController {
 
     @GetMapping("/")
     public String hello() {
-        return "Hello from Spring Boot on Kubernetes! v1.0.4";
+        return "Hello from Spring Boot on Kubernetes! v1.0.5";
     }
 }

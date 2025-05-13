@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   repository: paulthedev007/k8-flux-app
   pullPolicy: IfNotPresent
-  tag: "latest"
+  tag: "1.0.5"
 
 service:
   type: ClusterIP
