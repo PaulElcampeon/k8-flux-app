@@ -1,4 +1,3 @@
-
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
@@ -6,9 +5,9 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: ssh://github.com/PaulElcampeon/k8-flux-app
+  url: ssh://git@github.com/PaulElcampeon/k8-flux-app
   ref:
     branch: main
   secretRef:
-    name: k8-flux-app-source  # This should match the name you gave in the flux create secret command
+    name: k8-flux-app-source  # Make sure this matches the secret you created
   timeout: 20s
